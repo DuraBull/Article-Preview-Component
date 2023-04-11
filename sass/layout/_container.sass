@@ -2,7 +2,7 @@
     display: flex
     background: white
     border-radius: 15px
-    height: 280px
+    max-height: 280px
 
 .hero
     background: url("../images/drawers.jpg") no-repeat
@@ -43,13 +43,22 @@
     border-radius: 50%
 
 .share
+    position: relative
+    z-index: 100
     background: $light-grayish-blue
-    padding: .8em
+    width: 35px
+    height: 35px
+    padding: 10px
     border-radius: 50%
     margin-left: auto
     align-self: center
     &:hover
         cursor: pointer
+
+.share-active
+    background: $vdark-grayish-blue
+    path
+        fill: white
 
 .name
     display: flex

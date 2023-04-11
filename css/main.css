@@ -209,7 +209,7 @@ h1, h2 {
   display: flex;
   background: white;
   border-radius: 15px;
-  height: 280px;
+  max-height: 280px;
 }
 
 .hero {
@@ -254,14 +254,25 @@ h1, h2 {
 }
 
 .share {
+  position: relative;
+  z-index: 100;
   background: hsl(210, 46%, 95%);
-  padding: 0.8em;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
   border-radius: 50%;
   margin-left: auto;
   align-self: center;
 }
 .share:hover {
   cursor: pointer;
+}
+
+.share-active {
+  background: hsl(217, 19%, 35%);
+}
+.share-active path {
+  fill: white;
 }
 
 .name {
@@ -314,4 +325,38 @@ h1, h2 {
 
 .inv {
   display: none;
+}
+
+@media screen and (max-width: 45em) {
+  .container {
+    flex-direction: column;
+    max-height: 600px;
+  }
+  .hero {
+    width: 325px;
+    height: 200px;
+    border-radius: 15px 15px 0 0;
+  }
+  .article {
+    max-width: 325px;
+    padding: 3.2em 2.2em 1.5em 3em;
+  }
+  .description-head h1 {
+    font-size: 1rem;
+    margin-bottom: 0.7em;
+    line-height: 1.5rem;
+  }
+  .description-body {
+    margin-bottom: 2.5em;
+  }
+  .share-box {
+    top: -1.5em;
+    left: -3em;
+    width: 325px;
+    height: 6em;
+    border-radius: 0 0 10px 10px;
+  }
+  .share-box::after {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
